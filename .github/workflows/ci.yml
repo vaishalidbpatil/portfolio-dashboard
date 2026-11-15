@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t portfolio-dashboard:${{ github.sha }} .
+
+      - name: Smoke-test container starts
+        run: |
+          docker run -d --name test-dashboard -p 3000:80 portfolio-dashboard:${{ github.sha }}
+          sleep 2
+          curl --fail http://localhost:3000/index.html
+          docker rm -f test-dashboard
