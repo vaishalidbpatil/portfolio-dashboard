@@ -1,0 +1,25 @@
+Dockerfile
+  s_f6ca9e209b566f::t_91d457f479197a 1-5
+callback.html
+  s_f6ca9e209b566f::t_8980e58ef3b82a 1-60
+index.html
+  s_f6ca9e209b566f::t_0e2eca2252a000 1-345
+nginx.conf
+  s_f6ca9e209b566f::t_7928c805c75522 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b132e6928cd49e77d25193e351ccc4461ac91b8b",
+  "prompts": {},
+  "sessions": {
+    "s_f6ca9e209b566f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b8474267-82d1-431c-a7de-8b207ebf9fbe",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "vaishali.patil <vaishali.patil@coupa.com>"
+    }
+  }
+}
